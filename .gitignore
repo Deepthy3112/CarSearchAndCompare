@@ -4,3 +4,5 @@
 .classpath
 .project
 chromedriver.exe
+*.iml
+.DS_Store

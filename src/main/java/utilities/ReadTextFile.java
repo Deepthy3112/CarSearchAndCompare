@@ -9,6 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+//this is a generic method to read input text file into List using Pattern class of java which needs a Regex to identify regestration numbers in the file
 public class ReadTextFile {
     public static List<String> extractCarRegistrationNumbers(String filePath) {
         Matcher matcher = null;
@@ -22,6 +23,7 @@ public class ReadTextFile {
         return matcher.results().map(MatchResult::group).collect(Collectors.toList());
     }
 
+	//this method reads output files to get the values to compare against into a List
     public static List<String> readExpectedOutput(String filePath) {
     	List<String> data = null;
     	try {

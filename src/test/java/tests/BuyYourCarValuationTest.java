@@ -1,4 +1,3 @@
-// CarValuationTest.java
 package tests;
 
 import java.io.File;
@@ -45,7 +44,7 @@ public class BuyYourCarValuationTest extends GenerateTestReport {
  			String expectedValuation = expectedValuationsData.get(i+1);
 
 			buyYourCarValuationPage.enterRegistrationNumber(regNumber);
-			buyYourCarValuationPage.enterMileage("58000"); // Example mileage
+			buyYourCarValuationPage.enterMileage("58000");  
 			buyYourCarValuationPage.clickonSearch();
 			if(buyYourCarValuationPage.CheckIfError()) {
 				buyYourCarValuationPage.refreshPage();

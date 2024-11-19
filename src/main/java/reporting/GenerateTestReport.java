@@ -16,15 +16,11 @@ public class GenerateTestReport {
 	public static ExtentTest childtest;
 	
 	
-	@BeforeSuite
-	
+	@BeforeSuite	
 	public void generateHTMLReport()
-	{
-		
+	{		
 		try {
-			
-			long time=System.currentTimeMillis();
-			
+			long time=System.currentTimeMillis();			
 			String path=System.getProperty("user.dir")+"\\automationreport\\Report"+time+".html";
 			htmlreporter=new ExtentSparkReporter(path);
 			extent=new ExtentReports();
@@ -43,39 +39,22 @@ public class GenerateTestReport {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		
-		
+		}	
 	}
 	
 	@AfterSuite
 	public void saveReport()
 	{
-		
 		extent.flush();
-		
 	}
-	
 	
 	public void createTest(String name)
 	{
-		
 		try {
 			childtest=extent.createTest(name);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	}
+}
